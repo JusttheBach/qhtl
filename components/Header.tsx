@@ -64,7 +64,7 @@ const Header = () => {
             <Image src="/logoBo.png" width={60} height={50} alt="Logo 1" />
           </Link>
           <Link href="https://www1.cucthuyloi.gov.vn/">
-            <Image src="/logoCuc.png" width={95} height={50} alt="Logo 2" />
+            <Image src="/LogoCuc.png" width={95} height={50} alt="Logo 2" />
           </Link>
         </div>
 
