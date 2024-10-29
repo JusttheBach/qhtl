@@ -9,10 +9,11 @@ interface HoverImageProps {
   srcBase: string;
   srcHover: string;
   alt: string;
-  text: string;
+  text1: string;
+  text2: string;
 }
 
-const HoverImage: FC<HoverImageProps> = ({ href, srcBase, srcHover, alt, text }) => {
+const HoverImage: FC<HoverImageProps> = ({ href, srcBase, srcHover, alt, text1, text2 }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -24,12 +25,13 @@ const HoverImage: FC<HoverImageProps> = ({ href, srcBase, srcHover, alt, text })
       <Link href={href}>
         <Image
           src={hovered ? srcHover : srcBase}
-          width={150}
-          height={150}
+          width={200}
+          height={200}
           alt={alt}
         />
       </Link>
-      <h4 className="uppercase mt-2 font-bold text-xl text-white">{text}</h4> {/* Text turned white */}
+      <h4 className="uppercase mt-2 font-bold text-xl text-yellow-300">{text1}</h4> {/* Text turned white */}
+      <h4 className="uppercase mt-2 font-bold text-xl text-white">{text2}</h4> {/* Text turned white */}
     </div>
   );
 };
@@ -42,9 +44,9 @@ const Header = () => {
   } as const; // Explicitly making the entire object a const literal
 
   return (
-    <section className="relative w-full lg:h-[640px] sm:h-max flex flex-col items-start">
+    <section className="relative w-full lg:h-[750px] sm:h-max flex flex-col items-start">
       {/* Hero Image */}
-      <div className="absolute w-screen h-[640px] overflow-hidden">
+      <div className="absolute mt-20 w-screen h-[750px] overflow-hidden">
         <Image
           src={`/Hero.jpg`}
           fill={true}
@@ -81,14 +83,15 @@ const Header = () => {
       </div>
 
       {/* Divs above the hero image */}
-      <div className="relative mt-64 flex flex-row justify-around items-center w-full">
+      <div className="relative mt-80 flex flex-row justify-around items-center w-full">
         {/* Div 1 */}
         <HoverImage
           href="http://baovect.thuyloivietnam.gov.vn"
           srcBase="/baoveB.png"
           srcHover="/baoveC.png"
           alt="Image 1"
-          text="BẢO VỆ CÔNG TRÌNH THỦY LỢI"
+          text1="BẢO VỆ CÔNG TRÌNH THỦY LỢI"
+          text2='PROTECTION OF IRRIGATION WORKS'
         />
 
         {/* Div 2 */}
@@ -97,7 +100,9 @@ const Header = () => {
           srcBase="/chatluongB.png"
           srcHover="/chatluongC.png"
           alt="Image 2"
-          text="CHẤT LƯỢNG NƯỚC"
+          text1="CHẤT LƯỢNG NƯỚC"
+          text2='WATER QUALITY'
+
         />
 
         {/* Div 3 */}
@@ -106,7 +111,9 @@ const Header = () => {
           srcBase="/phapcheB.png"
           srcHover="/phapcheC.png"
           alt="Image 3"
-          text="PHÁP CHẾ"
+          text1="PHÁP CHẾ"
+          text2='LEGALS'
+
         />
       </div>
     </section>
