@@ -57,7 +57,7 @@ const Header = () => {
       </div>
 
       {/* Transparent Header */}
-      <div className="absolute top-0 left-0 w-full flex items-start p-4">
+      <div className="absolute top-0 left-0 w-full flex items-start p-4 bg-white">
         {/* Left Side: 2 logos */}
         <div className="flex flex-row space-x-2">
           <Link href="https://baovect.thuyloivietnam.gov.vn">
@@ -70,11 +70,11 @@ const Header = () => {
 
         {/* Right Side: 3 lines of text */}
         <div className="flex flex-col text-left items-start ml-4">
-          <span className="uppercase text-white">CỤC THỦY LỢI</span> {/* Text turned white */}
-          <span className="uppercase text-white">
+          <span className="uppercase text-blue-700 text-xl">CỤC THỦY LỢI</span> {/* Text turned white */}
+          <span className="uppercase text-blue-700 text-sm">
             HỆ THỐNG THÔNG TIN BẢO VỆ CÔNG TRÌNH VÀ CHẤT LƯỢNG NƯỚC
           </span>
-          <span className="uppercase text-white">
+          <span className="uppercase text-orange-400 text-sm">
             VIETNAM PROTECTION OF STRUCTURES AND WATER QUALITY INFORMATION SYSTEM
           </span>
         </div>
