@@ -25,12 +25,12 @@ const HoverImage: FC<HoverImageProps> = ({ href, srcBase, srcHover, alt, text1, 
       <Link href={href}>
         <Image
           src={hovered ? srcHover : srcBase}
-          width={200}
-          height={200}
+          width={250}
+          height={250}
           alt={alt}
         />
       </Link>
-      <h4 className="uppercase mt-2 font-bold text-xl text-yellow-300">{text1}</h4> {/* Text turned white */}
+      <h4 className="uppercase mt-5 font-bold text-xl text-yellow-300">{text1}</h4> {/* Text turned white */}
       <h4 className="uppercase mt-2 font-bold text-xl text-white">{text2}</h4> {/* Text turned white */}
     </div>
   );
@@ -40,7 +40,7 @@ const Header = () => {
   const imageStyle = {
     zIndex: -1, // Image has a lower z-index
     objectFit: 'cover',
-    objectPosition: 'top',
+    objectPosition: 'middle',
   } as const; // Explicitly making the entire object a const literal
 
   return (
@@ -61,19 +61,19 @@ const Header = () => {
       {/* Transparent Header */}
       <div className="absolute top-0 left-0 w-full flex items-start p-4 bg-white">
         {/* Left Side: 2 logos */}
-        <div className="flex flex-row space-x-2">
-          <Link href="https://baovect.thuyloivietnam.gov.vn">
+        <div className="flex flex-row space-x-0">
+          <Link href="https://mard.gov.vn/">
             <Image src="/logoBo.png" width={60} height={50} alt="Logo 1" />
           </Link>
           <Link href="https://www1.cucthuyloi.gov.vn/">
-            <Image src="/LogoCuc.png" width={95} height={50} alt="Logo 2" />
+            <Image src="/LogoCuc.png" width={100} height={50} alt="Logo 2" />
           </Link>
         </div>
 
         {/* Right Side: 3 lines of text */}
         <div className="flex flex-col text-left items-start ml-4">
-          <span className="uppercase text-blue-700 text-xl">CỤC THỦY LỢI</span> {/* Text turned white */}
-          <span className="uppercase text-blue-700 text-sm">
+          <span className="uppercase font-bold text-red-500 text-2xl">CỤC THỦY LỢI</span> {/* Text turned white */}
+          <span className="uppercase font-bold text-blue-700 text-lg">
             HỆ THỐNG THÔNG TIN BẢO VỆ CÔNG TRÌNH VÀ CHẤT LƯỢNG NƯỚC
           </span>
           <span className="uppercase text-orange-400 text-sm">
@@ -86,7 +86,7 @@ const Header = () => {
       <div className="relative mt-80 flex flex-row justify-around items-center w-full">
         {/* Div 1 */}
         <HoverImage
-          href="http://baovect.thuyloivietnam.gov.vn"
+          href="/path"
           srcBase="/baoveB.png"
           srcHover="/baoveC.png"
           alt="Image 1"

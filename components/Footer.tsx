@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="flex flex-col items-center bg-stone-100 w-full py-8">
       <div className="container mx-auto flex flex-row justify-between items-start gap-16 px-16">
-        
+
         {/* Left Section: Contact Information */}
         <div className="flex flex-col uppercase">
           <h3 className="text-xl text-blue-700 font-bold">Cục Thuỷ Lợi</h3>
