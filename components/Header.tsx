@@ -48,7 +48,7 @@ const Header = () => {
       {/* Hero Image */}
       <div className="absolute mt-20 w-screen h-[750px] overflow-hidden">
         <Image
-          src={`/Hero.jpg`}
+          src={`/DJI_0023.JPG`}
           fill={true}
           alt="anh thien nhien"
           style={imageStyle}
@@ -74,7 +74,7 @@ const Header = () => {
         <div className="flex flex-col text-left items-start ml-4">
           <span className="uppercase font-bold text-red-500 text-2xl">CỤC THỦY LỢI</span> {/* Text turned white */}
           <span className="uppercase font-bold text-blue-700 text-lg">
-            HỆ THỐNG THÔNG TIN BẢO VỆ CÔNG TRÌNH VÀ CHẤT LƯỢNG NƯỚC
+            TRANG THÔNG TIN BẢO VỆ CÔNG TRÌNH VÀ CHẤT LƯỢNG NƯỚC
           </span>
           <span className="uppercase text-orange-400 text-sm">
             VIETNAM PROTECTION OF STRUCTURES AND WATER QUALITY INFORMATION SYSTEM
@@ -87,8 +87,8 @@ const Header = () => {
         {/* Div 1 */}
         <HoverImage
           href="/path"
-          srcBase="/baoveB.png"
-          srcHover="/baoveC.png"
+          srcBase="/icon_bcct_d2.png"
+          srcHover="/icon_bcct_c2.png"
           alt="Image 1"
           text1="BẢO VỆ CÔNG TRÌNH THỦY LỢI"
           text2='PROTECTION OF IRRIGATION WORKS'
@@ -97,22 +97,22 @@ const Header = () => {
         {/* Div 2 */}
         <HoverImage
           href="https://chatluongnuoc.cucthuyloi.gov.vn"
-          srcBase="/chatluongB.png"
-          srcHover="/chatluongC.png"
+          srcBase="/icon_cln_d1.png"
+          srcHover="/icon_cln_c1.png"
           alt="Image 2"
           text1="CHẤT LƯỢNG NƯỚC"
-          text2='WATER QUALITY'
+          text2='WATER QUALITIES'
 
         />
 
         {/* Div 3 */}
         <HoverImage
           href="/path3"
-          srcBase="/phapcheB.png"
-          srcHover="/phapcheC.png"
+          srcBase="/icon_pc_d1.png"
+          srcHover="/icon_pc_c1.png"
           alt="Image 3"
-          text1="PHÁP CHẾ"
-          text2='LEGALS'
+          text1="PHÁP CHẾ & THANH TRA"
+          text2='INSPECTION & LEGALS AFFAIRS'
 
         />
       </div>
